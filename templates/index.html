@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2" data-aos="fade-right">
+      <h1 class="text-4xl font-bold mb-6">Superior user experience</h1>
+      <p class="mb-6 text-gray-600">Crucial Elements of the Website</p>
+      <p class="mb-6 text-gray-500">Nulla consequat massa quis enim. Nunc maximus, ac egestas risus placerat. Cras accumsan varius placerat Vestibulum varius sodales ultrices.</p>
+      <a href="#" class="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">Retrieve Resume</a>
+    </div>
+    <div class="md:w-1/2 mt-10 md:mt-0" data-aos="fade-left">
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2025/05/home3-1-01.jpg" alt="Hero Image" class="rounded shadow-lg" />
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+  <div data-aos="fade-up" class="space-y-6">
+    <div>
+      <h3 class="text-lg font-semibold">Graphic Designing</h3>
+      <p class="text-gray-600">To create effectiveness</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold">Readability</h3>
+      <p class="text-gray-600">Proper spacing & font</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold">Professional Branding</h3>
+      <p class="text-gray-600">Consistent tone & voice</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold">User-friendliness</h3>
+      <p class="text-gray-600">Quick to get into</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold">Connectivity</h3>
+      <p class="text-gray-600">Collaborate with others</p>
+    </div>
+  </div>
+  <div data-aos="fade-up" class="flex justify-center items-center">
+    <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2025/05/home3-1-03.jpg" alt="Features Image" class="rounded shadow-lg" />
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Our Expertise</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      {% for project in projects %}
+      <div class="bg-white rounded shadow p-4" data-aos="zoom-in">
+        <img src="{{ project.image }}" alt="{{ project.title }}" class="rounded mb-4" />
+        <h3 class="font-semibold text-lg">{{ project.title }}</h3>
+        <p class="text-gray-600">{{ project.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="max-w-7xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Our Patrons</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white rounded shadow p-6" data-aos="fade-right">
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/08/testimonial-01.jpg" alt="Dillon C. Pratt" class="rounded-full w-24 h-24 mx-auto mb-4" />
+      <h3 class="text-xl font-semibold text-center">Dillon C. Pratt</h3>
+      <p class="text-center text-gray-600 mb-4">Manager</p>
+      <p class="text-gray-600 text-sm">Aliquam cras sem at conubia nisl iaculis at sociosqu nam. Felis in vivamus varius maecenas, dapibus adipiscing amet. Consectetur sodales dignissim orci erat condimentum pulvinar. Odio egestas fusce ex sagittis vel nibh; potenti suspendisse. Scelerisque duis senectus aenean fringilla non. Diam duis massa class mi ad.</p>
+    </div>
+    <div class="bg-white rounded shadow p-6" data-aos="fade-up">
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/09/Home-1-Testimonial-1.jpg" alt="Van P. Collins" class="rounded-full w-24 h-24 mx-auto mb-4" />
+      <h3 class="text-xl font-semibold text-center">Van P. Collins</h3>
+      <p class="text-center text-gray-600 mb-4">Designer</p>
+      <p class="text-gray-600 text-sm">Lacinia eget arcu imperdiet tincidunt nisi. Per suscipit condimentum aenean vehicula mi semper imperdiet quam ultrices. Ut nostra eget luctus vel dapibus sem velit venenatis pretium. Blandit venenatis iaculis convallis praesent fermentum consequat; metus ipsum. Ac accumsan tristique diam elit, justo parturient quis.</p>
+    </div>
+    <div class="bg-white rounded shadow p-6" data-aos="fade-left">
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/09/Home-1-Testimonial-2.jpg" alt="Eva M. Shoe" class="rounded-full w-24 h-24 mx-auto mb-4" />
+      <h3 class="text-xl font-semibold text-center">Eva M. Shoe</h3>
+      <p class="text-center text-gray-600 mb-4">Developer</p>
+      <p class="text-gray-600 text-sm">Semper aptent magnis ac placerat donec. Dis parturient justo a condimentum habitant porttitor praesent. Tempus gravida enim platea gravida nascetur est. Natoque suspendisse erat mauris, porta curabitur nec ad magnis. Egestas imperdiet ad ligula eu finibus natoque aenean curae ut. Risus malesuada dictum.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Our Write-ups</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="rounded overflow-hidden shadow-lg" data-aos="fade-up">
+        <img class="w-full" src="https://wdtworkz.wpengine.com/wp-content/uploads/2025/05/blog-01.jpg" alt="Getting Your Dream Job by Mastering Interview Preparation" />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Getting Your Dream Job by Mastering Interview Preparation</div>
+          <p class="text-gray-600 text-sm mb-2">May 12, 2025 | 1 Comment</p>
+          <a href="https://wdtworkz.wpengine.com/getting-your-dream-job-by-mastering-interview-preparation/" class="text-blue-600 hover:underline">Keep Reading</a>
+        </div>
+      </div>
+      <div class="rounded overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+        <img class="w-full" src="https://wdtworkz.wpengine.com/wp-content/uploads/2025/05/blog-02.jpg" alt="Click, Type, Hired: The Secrets of Digital Resumes" />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Click, Type, Hired: The Secrets of Digital Resumes</div>
+          <p class="text-gray-600 text-sm mb-2">May 12, 2025 | 1 Comment</p>
+          <a href="https://wdtworkz.wpengine.com/click-type-hired-the-secrets-of-digital-resumes/" class="text-blue-600 hover:underline">Keep Reading</a>
+        </div>
+      </div>
+      <div class="rounded overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+        <img class="w-full" src="https://wdtworkz.wpengine.com/wp-content/uploads/2025/05/blog-03.jpg" alt="Show, Don’t Tell: Photographic Resume Visuals" />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Show, Don’t Tell: Photographic Resume Visuals</div>
+          <p class="text-gray-600 text-sm mb-2">May 12, 2025 | 1 Comment</p>
+          <a href="https://wdtworkz.wpengine.com/show-dont-tell-photographic-resume-visuals/" class="text-blue-600 hover:underline">Keep Reading</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Instagram Feed Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Our Instagram</h2>
+    <div class="grid grid-cols-3 sm:grid-cols-6 gap-4">
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/08/Insta-1.jpg" alt="Instagram 1" class="rounded shadow" data-aos="zoom-in" />
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/08/Insta-2.jpg" alt="Instagram 2" class="rounded shadow" data-aos="zoom-in" data-aos-delay="100" />
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/08/Insta-3.jpg" alt="Instagram 3" class="rounded shadow" data-aos="zoom-in" data-aos-delay="200" />
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/08/Insta-4.jpg" alt="Instagram 4" class="rounded shadow" data-aos="zoom-in" data-aos-delay="300" />
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/08/Insta-5.jpg" alt="Instagram 5" class="rounded shadow" data-aos="zoom-in" data-aos-delay="400" />
+      <img src="https://wdtworkz.wpengine.com/wp-content/uploads/2024/08/Insta-6.jpg" alt="Instagram 6" class="rounded shadow" data-aos="zoom-in" data-aos-delay="500" />
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white py-10 border-t border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 text-center text-gray-600">
+    &copy; 2025 WDT Workz. All rights reserved.
+  </div>
+</footer>
+
+{% endblock %}
